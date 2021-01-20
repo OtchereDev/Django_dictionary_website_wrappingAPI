@@ -54,7 +54,7 @@ ROOT_URLCONF = 'dictionary_website_wrapping_API.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +118,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL='/media/'
+
+STATIC_ROOT=BASE_DIR/'static_root'
+MEDIA_ROOT=BASE_DIR/'media_root'
+
+STATICFILES_DIRS=[
+    BASE_DIR/'static',
+]
