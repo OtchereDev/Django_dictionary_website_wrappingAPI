@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <div class="container mt-5">
+
+       <h1 class="text-center text-muted">Huddle (the Django dictionary)</h1>
+       <div class="row mt-5">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <form action="" method="POST">
+                    {%csrf_token%}
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Search for a word</span>
+                        <input type="text" class="form-control" placeholder="Search word" aria-label="word" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type='submit'>Search</button>
+                        
+                      </div>
+                </form>
+                
+            </div>
+            <div class="col-md-2">
+
+
+            </div>
+       </div>
+
+       <div class="row mt-5">
+           <div class="col-md-2">
+
+           </div>
+           <div class="col-md-8">
+            <h2>
+                Search result
+            </h2>
+            <div class="search_word row">
+                <div class="col-md-4 d-flex justify-content-between align-items-center mt-3">
+                 <h5>
+                     Word Searcher
+                 </h5>
+                 <div class="pronounication">
+                     <h6>
+                         hajsk/:
+                     </h6>
+                 </div>
+                </div>
+                
+            </div>
+ 
+            <div class="definitions mt-3">
+                <h6>
+                    Definitions:
+                </h6>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsa nam quia sint nulla sapiente labore voluptatibus soluta pariatur, excepturi, aperiam vero facilis cum nostrum voluptas praesentium. Voluptas, vel qui!Harum facilis officia facere, maxime amet totam explicabo earum quas voluptas? Natus totam nihil repellendus asperiores ipsam, harum aperiam ratione porro itaque aut delectus laborum, deserunt nam nulla quod magnam?
+                </p>
+                <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsa nam quia sint nulla sapiente labore voluptatibus soluta pariatur, excepturi, aperiam vero facilis cum nostrum voluptas praesentium. Voluptas, vel qui!Harum facilis officia facere, maxime amet totam explicabo earum quas voluptas? Natus totam nihil repellendus asperiores ipsam, harum aperiam ratione porro itaque aut delectus laborum, deserunt nam nulla quod magnam?
+                 </p>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsa nam quia sint nulla sapiente labore voluptatibus soluta pariatur, excepturi, aperiam vero facilis cum nostrum voluptas praesentium. Voluptas, vel qui!Harum facilis officia facere, maxime amet totam explicabo earum quas voluptas? Natus totam nihil repellendus asperiores ipsam, harum aperiam ratione porro itaque aut delectus laborum, deserunt nam nulla quod magnam?
+                 </p>
+            </div>
+
+            <div class="examples mt-3">
+                <h6>
+                    Examples:
+                </h6>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </p>
+                <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                 </p>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                 </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mt-3 mb-5">
+                    <h6>Synomyms: </h6>
+                    <div class="synomyms d-flex justify-content-between align-items-center">
+                        <button class="btn btn-secondary">oliver</button>
+                        <button class="btn btn-secondary">Ama</button>
+                        <button class="btn btn-secondary">Joy</button>
+                        <button class="btn btn-secondary">Ella</button>
+                    </div>
+                </div>
+            </div>
+            
+           </div>
+           <div class="col-md-2">
+
+           </div>
+       </div>
+
+       
+   </div>
+{% endblock content %}
+
