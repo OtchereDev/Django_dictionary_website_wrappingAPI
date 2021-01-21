@@ -38,7 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dictionary_website'
+
+    # third party party app
+    'rest_framework',
+
+
+    # own app
+    'dictionary_website',
+    'wrappingAPI',
 ]
 
 MIDDLEWARE = [
