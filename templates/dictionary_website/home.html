@@ -9,11 +9,11 @@
 
             </div>
             <div class="col-md-8">
-                <form action="" method="POST">
+                <form method="POST">
                     {%csrf_token%}
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Search for a word</span>
-                        <input type="text" class="form-control" placeholder="Search word" aria-label="word" aria-describedby="basic-addon1">
+                        <input type="text" name='search_word' class="form-control" placeholder="Search word" aria-label="word" aria-describedby="basic-addon1">
                     </div>
                     <div class="d-grid gap-2">
                         <button class="btn btn-primary" type='submit'>Search</button>
