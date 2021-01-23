@@ -1,9 +1,16 @@
 from django.shortcuts import render
-from .helpers import contactAPI
+from .helpers import contactAPI,word_of_the_day
 
 def home(request):
 
-    context={}
+    
+    random_word=word_of_the_day()
+
+    context={
+        'method':'GET',
+        'word':random_word['word'],
+        'definition':random_word['definition']
+    }
 
     if request.method =='POST':
         search_word = request.POST.get('search_word')
