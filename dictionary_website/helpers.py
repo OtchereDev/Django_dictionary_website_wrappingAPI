@@ -37,17 +37,30 @@ def get_random_word():
 
 def word_of_the_day():
     current_word=WordOfTheDay.objects.last()
-    word_add_time = current_word.timestamp+timedelta(hours=23)
-    
-    if word_add_time > timezone.now():
-        words_day ={'word':current_word.word,
-                    'definition':current_word.definition}
-        return words_day
+    if current_word:
+        word_add_time = current_word.timestamp+timedelta(hours=23)
+        
+        if word_add_time > timezone.now():
+            words_day ={'word':current_word.word,
+                        'definition':current_word.definition}
+            return words_day
+
+        else:
+            
+            current_word.delete()
+            
+            data=get_random_word()
+            
+            random_word=data['word']
+            definition=data['results'][0]['definition']
+            WordOfTheDay.objects.create(word=random_word,definition=definition)
+
+            words_day ={'word':random_word,
+                        'definition':definition}
+            return words_day
 
     else:
-        
-        current_word.delete()
-        
+            
         data=get_random_word()
         
         random_word=data['word']
